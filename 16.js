@@ -23,3 +23,32 @@ s	answer
 ※ 공지 - 2021년 8월 23일 테스트케이스가 추가되었습니다.
 
 */
+
+/* [기본 코드]
+
+function solution(s){
+    var answer = true;
+
+    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+    console.log('Hello Javascript')
+
+    return answer;
+}
+
+*/
+
+//[생각해보기] : 간단하게 문자열에 알파벳이 들어가있는데 알파벳의 갯수가 같으면 true, 아니면 false를 리턴
+// 음... 일단 알파벳은 소문자 대문자를 구별하지 않으니, 모두 대문자로 바꾸거나 소문자로 바꾸거나
+// let alpha = [a, b, c, d ...z] 선언
+// 바꾼다음 for(let i=0;)) if 같으면() 트루, else 폴스 이정도
+
+function solution(s){
+    let change = s.toLowerCase();
+    let check_p = change.split("p").length;
+    let check_y = change.split("y").length;
+    
+    return check_p == check_y ? true : false;
+}
+
+// 소문자로 바꾸고, change를 가져와 p로 쪼개고, y로 쪼갠다.
+// 쪼갠 p와 y의 갯수가 같으면 트루 아니면 폴스 아주 직관적인 코드다.

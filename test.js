@@ -46,7 +46,7 @@ function solution(n) {
     let sum="";
     let num= 0;
 
-    let str = String(n).split('').reverse().Map(i => parseInt(i))
+    let str = String(n).split('').reverse().map(i => parseInt(i))
 
     for(let i=0; i<str.length; i++) {
         num += Number(str[i])
